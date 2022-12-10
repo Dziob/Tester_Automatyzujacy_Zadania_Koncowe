@@ -15,11 +15,24 @@ public class YourAccount {
     @FindBy(xpath = "//footer/div/a")
     WebElement signOut;
 
+    @FindBy(id = "category-3")
+    WebElement clothesBtn;
+
+    @FindBy(xpath = "//*[@id='history-link']")
+    WebElement orderHistory;
+
     public void toAdressess(){
         addresses.click();
     }
 
     public void logOut(){
         signOut.click();
+    }
+
+    public void toClothes(){
+        clothesBtn.click();
+    }
+    public void toOrderHistory(){
+        orderHistory.click();
     }
 }
